@@ -15,7 +15,11 @@ class InterestForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    this.props.calculateInterest()
+    this.props.calculateInterest({
+      principal: parseFloat(this.state.principal, 10),
+      rate: parseFloat(this.state.rate, 10),
+      years: parseFloat(this.state.years, 10)
+    })
     this.setState({
       principal: "",
       rate: "",

@@ -1,7 +1,7 @@
-function interestReducer(state = {principal: null, rate: null, years: null, result: null}, action){
+function interestReducer(state = {result: null}, action){
   switch(action.type){
-    case 'CALCULATE_STATE':
-      return state
+    case 'CALCULATE_INTEREST':
+      return {result: action.principal * (1 + (action.rate * action.years))}
     default:
       return state
   }

@@ -1,9 +1,7 @@
-const calculateInterest = (principal, rate, years) => {
+const calculateInterest = formInput => {
   return {
     type: "CALCULATE_INTEREST",
-    principal,
-    rate,
-    years
+    ...formInput
   }
 }
 
