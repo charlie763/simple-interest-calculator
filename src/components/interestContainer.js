@@ -9,10 +9,10 @@ class InterestContainer extends React.Component {
     return(
       <>
         <InterestForm calculateInterest={this.props.calculateInterest}/>
-        <InterestResult />
+        <InterestResult result={this.props.result}/>
       </>
     )
   }
 }
 
-export default connect(null, { calculateInterest })(InterestContainer)
+export default connect(state => ({result: state.result}), { calculateInterest })(InterestContainer)

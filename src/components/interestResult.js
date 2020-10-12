@@ -1,8 +1,10 @@
 import React from 'react'
 
-const InterestResult = props => {
+const InterestResult = ({ result }) => {
   return(
-    <div>result</div>
+    <div>
+      <h3>Total: {result ? `$${result}` : ""}</h3>
+    </div>
   )
 }
 
