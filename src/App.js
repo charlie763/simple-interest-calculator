@@ -1,10 +1,11 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
+import InterestContainer from './components/InterestContainer'
 
 function App() {
   return (
     <div>
-      
+      <InterestContainer />
     </div>
   );
 }
