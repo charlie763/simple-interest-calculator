@@ -13,9 +13,19 @@ class InterestForm extends React.Component {
     })
   }
 
+  handleSubmit = e => {
+    e.preventDefault()
+    this.props.calculateInterest()
+    this.setState({
+      principal: "",
+      rate: "",
+      years: ""
+    })
+  }
+
   render(){
     return(
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label>Principal: </label>
         <input type="text" name="principal" value={this.state.principal} onChange={this.handleInputChange}/><br/>      
         <label>Annual Interest Rate: </label>
