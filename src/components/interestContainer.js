@@ -4,6 +4,8 @@ import InterestForm from './InterestForm'
 import InterestResult from './InterestResult'
 import { calculateInterest } from '../actions/interestActions'
 
+// Container class that connects to the Redux store. Passes dispatch actions to InterestForm Component
+// and passes store state to InterestResult presentational component.
 class InterestContainer extends React.Component {
   render(){
     return(
