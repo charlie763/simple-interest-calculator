@@ -8,6 +8,7 @@ class InterestContainer extends React.Component {
   render(){
     return(
       <>
+        <h1>Simple Interest Calculator</h1>
         <InterestForm calculateInterest={this.props.calculateInterest}/>
         <InterestResult result={this.props.result}/>
       </>

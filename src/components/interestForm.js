@@ -1,10 +1,14 @@
 import React from 'react'
 
 class InterestForm extends React.Component {
-  state = {
+  static clearState = {
     principal: "",
     rate: "",
     years: ""
+  }
+
+  state = {
+    ...this.clearState
   }
 
   handleInputChange = e => {
@@ -21,9 +25,7 @@ class InterestForm extends React.Component {
       years: parseFloat(this.state.years, 10)
     })
     this.setState({
-      principal: "",
-      rate: "",
-      years: ""
+      ...this.constructor.clearState
     })
   }
 
@@ -36,7 +38,7 @@ class InterestForm extends React.Component {
         <input type="text" name="rate" value={this.state.rate} onChange={this.handleInputChange}/><br/>
         <label>Years: </label>
         <input type="text" name="years" value={this.state.years} onChange={this.handleInputChange}/><br/> 
-        <input type="submit" />   
+        <input type="submit" value="Calculate Interest"/>   
      </form>
     )
   }
