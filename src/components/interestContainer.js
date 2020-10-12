@@ -1,11 +1,16 @@
 import React from 'react'
+import InterestForm from './InterestForm'
+import InterestResult from './InterestResult'
 
-class interestContainer extends React.Component {
+class InterestContainer extends React.Component {
   render(){
     return(
-      <span>Interest container</span>
+      <>
+        <InterestForm />
+        <InterestResult />
+      </>
     )
   }
 }
 
-export default interestContainer
+export default InterestContainer
