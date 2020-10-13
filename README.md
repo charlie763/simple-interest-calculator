@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Implementation Notes
+I set up the file structure to maximize separation of concerns. Specifically, there are separate folders and files for redux actions/events, reducers, and components. This separated file structure may be a little excessive considering how simple of an application this is, but I wanted to demonstrate how I might set up a more complex application where separation of concerns becomes much more important.
+
+For style, I used ESLint, the configuration of which can be found in the `eslintrc.json` file.
+
 ## Available Scripts
 
 In the project directory, you can run:

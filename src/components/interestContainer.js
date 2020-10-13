@@ -10,9 +10,9 @@ import { calculateInterest } from '../actions/interestActions'
 class InterestContainer extends React.Component {
   static propTypes = {
     calculateInterest: PropTypes.func,
-    result: PropTypes.string
+    result: PropTypes.number
   }
-  
+
   render(){
     return(
       <>

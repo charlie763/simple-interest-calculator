@@ -11,7 +11,7 @@ const InterestResult = ({ result }) => {
 }
 
 InterestResult.propTypes = {
-  result: PropTypes.string
+  result: PropTypes.number
 }
 
 export default InterestResult
