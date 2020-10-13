@@ -7,14 +7,10 @@ class InterestForm extends React.Component {
     calculateInterest: PropTypes.func
   }
 
-  static clearState = {
+  state = {
     principal: "",
     rate: "",
     years: ""
-  }
-
-  state = {
-    ...this.clearState
   }
 
   handleInputChange = e => {
@@ -29,9 +25,6 @@ class InterestForm extends React.Component {
       principal: parseFloat(this.state.principal, 10),
       rate: parseFloat(this.state.rate, 10),
       years: parseFloat(this.state.years, 10)
-    })
-    this.setState({
-      ...this.constructor.clearState
     })
   }
 
