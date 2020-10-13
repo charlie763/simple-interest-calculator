@@ -1,7 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // Component that handles form input: the variables principal, rate, and years that go into the interest rate calculation
 class InterestForm extends React.Component {
+  static propTypes = {
+    calculateInterest: PropTypes.func
+  }
+
   static clearState = {
     principal: "",
     rate: "",
